@@ -117,17 +117,17 @@ export default function ToDo() {
                             <IconButton icon='check-bold' size={30} onPress={() => {
                                 adicionarTarefaConcluida(item)
                             }} />
-                            <IconButton icon='lead-pencil' size={30} onPress={() => {
+                            <IconButton icon='pencil' size={30} onPress={() => {
                                 handleEditarTarefa(item)
                             }} />
-                            <IconButton icon='delete-forever' size={30} onPress={() => {
+                            <IconButton icon='delete' size={30} onPress={() => {
                                 excluirTarefa(item)
                             }} />
                         </Card.Content>
                     </Card>
                 )}
             />
-                <Text>Tarefas concluídas</Text>
+                <Text>Finalizadas</Text>
                 <FlatList
                 style={styles.list}
                 data={tarefasConcluidas}
@@ -155,7 +155,8 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         flexDirection: 'row',
-        paddingTop: 2,
+        width: '95%',
+        paddingTop: 35,
         gap: 5
     },
     button: {
